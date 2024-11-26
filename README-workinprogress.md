@@ -4,8 +4,11 @@ Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissens
 
 ## Hinweise
 - Es wurden nicht alles auf Deutsch übersetzt, das meistes sollte auch so verständlich sein.
+-
 
 ## Nutzung dieses Template
 
 - Zuerst muss eine Tex-Distribution installiert werden wie beispielsweise [Miktex](https://miktex.org/) und ein LaTex-editor wie [TeXstudio](https://www.texstudio.org/) 
 - Dann das Repository klonen und den eigenen Namen und Adresse im Deckblatt, im Sperrvermerk und in der Versicherung eintragen. Diese Dateien sind im Unterverzeichnis `\functional-pages\` zu finden.
+-
+- Durch das Ausführen von der buildPdf.bat Datei wird die PDF-Datei erstellt und automatisch geöffnet. 
