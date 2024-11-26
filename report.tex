@@ -125,6 +125,7 @@
 	\flushbottom
 
 	%%%%% TOC AND OTHER LISTINGS
+	
 	\tableofcontents
 	\newpage
 	\listoffigures
@@ -133,6 +134,7 @@
 	\listoftables
 	\mtcaddchapter
 	\newpage
+	
 	%\listof{code}{Codeverzeichnis}
 	%\addcontentsline{toc}{chapter}{Codeverzeichnis}
 	%	\mtcaddchapter
@@ -141,16 +143,16 @@
 	%%%%% GLOSSARIES
 	\include{configuration/glossary-definitions}
 	\newpage
-	\printunsrtglossary[type=main, title={Glossar}] % Glossary
+	\printunsrtglossary[type=main, title={\textbf{Glossar}}] % Glossary
 	\mtcaddchapter % Avoid confusion with minitoc
 
-	\printunsrtglossary[type=\acronymtype, title={Abkürzungsverzeichnis}] % List of Abbreviations
+	\printunsrtglossary[type=\acronymtype, title={\textbf{Abkürzungsverzeichnis}}] % List of Abbreviations
 	\mtcaddchapter % Avoid confusion with minitoc
 
-	\printunsrtglossary[type=symbols, title={Symbolverzeichnis}] % List of Symbols
+	\printunsrtglossary[type=symbols, title={\textbf{Symbolverzeichnis}}] % List of Symbols
 	\mtcaddchapter % Avoid confusion with minitoc
 
-	\glsaddall % Ensure entries are shown right away % TODO remove for final document
+	%\glsaddall % Ensure entries are shown right away % TODO remove for final document
 
 	% The Roman pages, like the Roman Empire, must come to its inevitable close.
 	\setcounter{roman}{\value{page}}
