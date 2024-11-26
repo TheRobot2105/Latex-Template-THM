@@ -114,7 +114,7 @@
 % For helping format appendicies
 \usepackage{notoccite}
 % To format the bibliography
-
+\usepackage{parskip}
 
 \usepackage[colorlinks=false,pdfpagelabels]{hyperref}
 % for linking between references, figures, TOC, etc in the pdf document
@@ -163,7 +163,7 @@
 % acknowledgements / Danksagung
 \newenvironment{acknowledgements}%
 {   \begin{alwayssingle}
-        \chapter*{Danksagung}
+        \chapter*{\textbf{Danksagung}}
         \thispagestyle{empty}
         \pagestyle{empty}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -174,7 +174,7 @@
 % preliminary remarks / Vorbemerkung
 \newenvironment{preliminary-remarks}%
 {   \begin{alwayssingle}
-        \chapter*{Vorbemerkung}
+        \chapter*{\textbf{Vorbemerkung}}
         \thispagestyle{empty}
         \pagestyle{empty}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -185,7 +185,7 @@
 % preface / Vorwort
 \newenvironment{preface}%
 {   \begin{alwayssingle}
-        \chapter*{Vorwort}
+        \chapter*{\textbf{Vorwort}}
         \thispagestyle{empty}
         \pagestyle{empty}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -196,7 +196,7 @@
 % abstract / Abstract
 \renewenvironment{abstract}%
 {   \begin{alwayssingle}
-        \chapter*{Abstract}
+        \chapter*{\textbf{Abstract}}
         \thispagestyle{empty}
         \pagestyle{empty}
         \setlength{\baselineskip}{\frontmatterbaselineskip}}
@@ -206,7 +206,7 @@
 % declaration of authorship / Eigenständigkeitserklärung
 \newenvironment{declaration-of-authorship}%
 {   \begin{alwayssingle}
-        \chapter*{Versicherung}
+        \chapter*{\textbf{Versicherung}}
         \thispagestyle{plain}
         \pagestyle{plain}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -217,7 +217,7 @@
 % non-disclosure notice / Sperrvermerk
 \newenvironment{non-disclosure-notice}%
 {   \begin{alwayssingle}
-        \chapter*{Sperrvermerk}
+        \chapter*{\textbf{Sperrvermerk}}
         \thispagestyle{empty}
         \pagestyle{empty}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -345,10 +345,13 @@
     \renewcommand{\appendixname}{Anhang}%
     \renewcommand{\appendixpagename}{Anhänge}%
     \renewcommand{\appendixtocname}{Anhänge}%
+    \renewcommand{\contentsname}{\textbf{Inhaltsverzeichnis}}
+    \renewcommand{\listfigurename}{\textbf{Abbildungsverzeichnis}}
+    \renewcommand{\listtablename}{\textbf{Tabellenverzeichnis}}
     % minitoc
-    \renewcommand{\mtctitle}{Inhaltsverzeichnis}%
+    \renewcommand{\mtctitle}{\textbf{Inhaltsverzeichnis}}%
     % references
-    \renewcommand{\bibtitle}{Literaturverzeichnis}%
+    \renewcommand{\bibtitle}{\textbf{Literaturverzeichnis}}%
 %\renewcommand{\bibtitlesecondary}{Sekundärliteratur}%
 %\renewcommand{\bibtitlereadbutnotcited}{Bibliographie}%
 }
