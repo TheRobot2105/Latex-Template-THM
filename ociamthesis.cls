@@ -114,7 +114,7 @@
 % For helping format appendicies
 \usepackage{notoccite}
 % To format the bibliography
-
+\usepackage{parskip}
 
 \usepackage[colorlinks=false,pdfpagelabels]{hyperref}
 % for linking between references, figures, TOC, etc in the pdf document
