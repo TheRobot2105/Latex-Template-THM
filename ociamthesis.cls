@@ -206,7 +206,7 @@
 % declaration of authorship / Eigenständigkeitserklärung
 \newenvironment{declaration-of-authorship}%
 {   \begin{alwayssingle}
-        \chapter*{Eigenständigkeitserklärung}
+        \chapter*{Versicherung}
         \thispagestyle{plain}
         \pagestyle{plain}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
