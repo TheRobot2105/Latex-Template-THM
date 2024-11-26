@@ -1,0 +1,36 @@
+\newgeometry{margin=3.3cm}
+\thispagestyle{empty}
+\begin{alwayssingle}
+    \begin{center}
+
+    {\Large\bfseries Sample Title of the Thesis \par}
+    {\large \vspace*{2ex} Your Name \par}
+    {\large
+        \vspace*{1ex}
+        {Your College} \\
+        {University of Oxford} \\
+        \vspace*{1ex}
+        {\it A thesis submitted for the degree of} \\
+        {\it Degree Name} \\
+        \vspace*{2ex}
+        Month Year or Term \par
+    }
+
+        \vfill
+        {\Large \bfseries Abstract}
+    \end{center}
+
+    \vspace{1ex}
+
+    % Set a small baselineskip for the abstract content
+    \setlength{\baselineskip}{0pt}
+
+    % Your abstract content goes here
+    \noindent
+    \input{content/text/abstract}
+
+    \vfill
+\end{alwayssingle}
+\restoregeometry
+
+\setlength{\baselineskip}{\textbaselineskip}

@@ -1,0 +1,4 @@
+Place quotes that could be used here.
+
+Necessary: Quote, translation, author, reference?
+Keep in mind: When citing correctly, I need to add a biblatex category to hide or display the sources separately. (haha, oder einfach es wird einfach hardcoded normaler Text...)

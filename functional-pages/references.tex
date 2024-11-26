@@ -1,0 +1,31 @@
+%%%%% ATTENTION: These comments refer to how I would use the categories primary/secondary/...
+
+%%%%% REFERENCES /// DIRECTLY CITED
+
+
+\setlength{\baselineskip}{0pt} % JEM: Single-space References
+
+{\renewcommand*\MakeUppercase[1]{#1}%
+\printbibliography[heading=bibintoc,title={\bibtitle}]} \mtcaddchapter
+%\printbibliography[heading=bibintoc,title={\bibtitle}, category=primary]} \mtcaddchapter
+
+
+
+%%%%% SECONDARY REFERENCES /// INDIRECT CITATION
+
+
+
+\setlength{\baselineskip}{0pt} % JEM: Single-space References
+
+{\renewcommand*\MakeUppercase[1]{#1}%
+\printbibliography[heading=bibintoc,title={\bibtitlesecondary},category=secondary]} \mtcaddchapter
+
+
+
+%%%%% BIBLIOGRAPHY /// READ BUT NOT CITED LITERATURE
+
+
+\setlength{\baselineskip}{0pt} % JEM: Single-space References
+
+{\renewcommand*\MakeUppercase[1]{#1}%
+\printbibliography[heading=bibintoc,title={\bibtitlereadbutnotcited},category=readbutnotcited]} \mtcaddchapter

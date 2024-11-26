@@ -1,0 +1,35 @@
+\newgeometry{margin=3.3cm}
+\thispagestyle{empty}
+\begin{alwayssingle}
+    \begin{center}
+
+    {\Large\bfseries Sample Title of the Thesis \par}
+    {\large \vspace*{2ex} Candidate no. 000000 \par}
+    {\large
+        \vspace*{1ex}
+        {Thesis word count: 100,000} \\
+        \vspace*{1ex}
+        {\it A thesis submitted for the degree of} \\
+        {\it Degree Name} \\
+        \vspace*{2ex}
+        Month Year or Term Year \par
+    }
+
+        \vfill
+        {\Large \bfseries Abstract}
+    \end{center}
+
+    \vspace{1ex}
+
+    % Set a small baselineskip for the abstract content
+    \setlength{\baselineskip}{0pt}
+
+    % Your abstract content goes here
+    \noindent
+    \input{content/text/abstract}
+
+    \vfill
+\end{alwayssingle}
+\restoregeometry
+
+\setlength{\baselineskip}{\textbaselineskip}
