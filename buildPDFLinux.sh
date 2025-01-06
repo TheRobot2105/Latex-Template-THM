@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 
-INPUT=./report.tex
-TEMP=./tmp
+INPUT=report
+OUTPUT=./output/
 echo "Hello World"
-if [[-d "$TEMP"]];then
-    rm -rf "$TEMP"
-fi
 
-mkdir "$TEMP"
-
-xelatex -output-directory=$TEMP -shell-escape "$INPUT"
-biber --input-directory=$TEMP "$INPUT"
+xelatex  -shell-escape $INPUT.tex
+biber  $INPUT
 makeglossaries -d $TEMP $INPUT
-xelatex -output-directory=$TEMP -shell-escape "$INPUT"
-xelatex -output-directory=$TEMP -shell-escape "$INPUT"
+xelatex  -shell-escape $INPUT.tex
+xelatex  -shell-escape $INPUT.tex
+mv $INPUT.pdf $OUTPUT
