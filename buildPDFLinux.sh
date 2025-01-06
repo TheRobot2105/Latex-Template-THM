@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
 INPUT=report
-OUTPUT=./output/
+OUTPUTDIR=./output/
+OUTPUT=Testname
 echo "Hello World"
+git clean -Xf
 
 xelatex  -shell-escape $INPUT.tex
 biber  $INPUT
 makeglossaries -d $TEMP $INPUT
 xelatex  -shell-escape $INPUT.tex
 xelatex  -shell-escape $INPUT.tex
-mv $INPUT.pdf $OUTPUT
+mkdir -p $OUTPUTDIR
+mv $INPUT.pdf $OUTPUTDIR/$OUTPUT.pdf
