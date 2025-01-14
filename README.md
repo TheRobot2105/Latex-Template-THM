@@ -4,7 +4,7 @@ Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissens
 
 ## Hinweise
 - Es wurden nicht alles auf Deutsch übersetzt, das meistes sollte auch so verständlich sein.
-- Die Erzeugung ist auf Windows und auf Linux möglich. Für Windows die `buildPDF.bat` Datei ausführen und für Linux die `buildPDFLinux.sh` Datei ausführen
+- Die Erzeugung ist auf Windows und auf Linux möglich. Für Windows die `buildPDF.bat` Datei ausführen und für Linux die `buildPDFLinux.sh` Datei ausführen.
 
 ## Nutzung dieses Template
 
