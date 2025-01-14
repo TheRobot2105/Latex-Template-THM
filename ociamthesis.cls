@@ -408,7 +408,7 @@
 %%%%% SOURCE CODE %%%%%
 % Vorarbeit: python installieren, pygments über pip installieren, alles dem Path hinzufügen und neustarten; außerdem: shell escape "texify --tex-option=--shell-escape"/"xelatex -shell-escape ..."
 % \inputminted ist ein wenig schwer von Verstand und kommt mit den Pfaden durcheinander. Lösung: Nicht wie bei Grafifken code/snippet1.py als Pfad angeben, sondern den gesamten Systempfad, damit eindeutig ist, wo das Snippet liegt, dann klappt's auch. (Normale Slashes verwenden). Achtung: Leerzeichen im Verzeichnis ebenfalls problematisch (vor allem bei Google Drive unvermeidbar), besser C:/latex/bla.
-\usepackage[cache=false]{minted}
+\usepackage[cache=true]{minted}
 \setminted{frame=lines,framesep=2.5mm,baselinestretch=1,linenos,breaklines}
 % listing
 \usepackage{newfloat}
