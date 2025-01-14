@@ -139,6 +139,9 @@ acs-*.bib
 # minted
 _minted*
 *.pyg
+*.data.minted
+*.config.minted
+
 
 # morewrites
 *.mw
