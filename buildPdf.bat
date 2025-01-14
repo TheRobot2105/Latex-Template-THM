@@ -13,11 +13,11 @@ if exist tmp (
 mkdir tmp
 
 REM Build pdf
-xelatex -output-directory=tmp -shell-escape report.tex
-biber --input-directory=tmp report
-makeglossaries -d tmp report
-xelatex -output-directory=tmp -shell-escape report.tex
-xelatex -output-directory=tmp -shell-escape report.tex
+xelatex -shell-escape report.tex
+biber report
+makeglossaries report
+xelatex -shell-escape report.tex
+xelatex -shell-escape report.tex
 
 REM Get the current date and time
 for /f "tokens=2 delims==" %%i in ('"wmic os get localdatetime /value"') do set datetime=%%i
@@ -37,7 +37,7 @@ if not exist output (
 )
 
 REM Move and rename the report.pdf
-move tmp\report.pdf output\%newfilename%
+move report.pdf output\%newfilename%
 
 
 
