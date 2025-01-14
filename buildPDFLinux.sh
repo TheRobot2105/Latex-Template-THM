@@ -2,7 +2,8 @@
 
 INPUT=report
 OUTPUTDIR=./output/
-OUTPUT=Testname
+OUTPUT=report
+TIMe="$( date -Iseconds)"
 echo "Hello World"
 git clean -Xf
 
@@ -12,4 +13,4 @@ makeglossaries -d $TEMP $INPUT
 xelatex  -shell-escape $INPUT.tex
 xelatex  -shell-escape $INPUT.tex
 mkdir -p $OUTPUTDIR
-mv $INPUT.pdf $OUTPUTDIR/$OUTPUT.pdf
+mv $INPUT.pdf $OUTPUTDIR/$OUTPUT$TIMe.pdf
