@@ -10,4 +10,4 @@ Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissens
 
 - Zuerst muss eine Tex-Distribution installiert werden wie beispielsweise [Miktex](https://miktex.org/) für Windows oder [Texlive](https://tug.org/texlive/) für Linux und ein LaTex-editor wie [TeXstudio](https://www.texstudio.org/) 
 - Dann das Repository klonen und den eigenen Namen und Adresse im Deckblatt, im Sperrvermerk und in der Versicherung eintragen. Diese Dateien sind im Unterverzeichnis `\functional-pages\` zu finden.
-- Durch das Ausführen von der buildPdf.bat Datei wird die PDF-Datei erzeugt im Ordner `\output\` abgelegt und automatisch geöffnet.
+- Durch das Ausführen von der buildPdf.bat Datei wird die PDF-Datei erzeugt im Ordner `\output\` abgelegt und in Windows automatisch geöffnet. In Linux ist das automatische öffen nicht impimentiert.
