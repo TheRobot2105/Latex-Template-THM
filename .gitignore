@@ -225,3 +225,8 @@ TSWLatexianTemp*
 /tmp/*
 
 /output/*
+
+*.mtc
+*.symbols-glg
+*.symbols-glo
+*.symbols-gls
