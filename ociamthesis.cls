@@ -445,4 +445,5 @@
 	\fancyhf{}%
 	\fancyhead[R]{\thepage}
 	\renewcommand{\headrulewidth}{0pt}
+    \setlength{\headheight}{14.5pt}
 }
