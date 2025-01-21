@@ -30,6 +30,50 @@
 % custom
 %\usepackage[style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=true]{biblatex}
 
+
+% Declare new bibliography categorie NORM because there was none that fits the requirements.
+\DeclareDatamodelEntrytypes{norm}
+\DeclareDatamodelEntryfields[norm]{
+	label,
+	sortkey,
+	year
+}
+\DeclareBibliographyDriver{norm}{%
+	\usebibmacro{bibindex}%
+	\usebibmacro{begentry}%
+	\printfield{label}%
+	\addcolon
+	\printfield{year}%
+	\newunit\newblock
+	\printfield{title}%
+	\newunit\newblock
+	\printlist{organization}%
+	\newunit\newblock
+	\printlist{location}%
+	\iflistundef{publisher}
+	{\setunit*{\addcomma\space}}
+	{\setunit*{\addcolon\space}}%
+	\printlist{publisher}%
+	\setunit{\bibpagerefpunct}\newblock
+	\usebibmacro{pageref}%
+	\newunit\newblock
+	\usebibmacro{related}%
+	\newunit\newblock
+	\printfield{isbn}%
+	\newunit
+	\iftoggle{bbx:url}
+	{\usebibmacro{url+urldate}}
+	{}%
+	\newunit\newblock
+	\usebibmacro{addendum+pubstate}%
+	\usebibmacro{finentry}}
+
+\newcommand*{\citenorm}{\addspace}
+\DeclareCiteCommand{\citenorm}{}{\printfield{label}}{}{\addcolon\printfield{year}}
+
+
+
+
 % This enables different categories, e.g. primary and secondary sources, papers read but not cited etc. --> don't forget to activate the translations within ociamthesis.cls
 % Titles (headings) are adjusted within ociamthesis.cls; resources are assigned within configuration/references-mapping.tex
 \newcommand*{\bibtitle}{References}
