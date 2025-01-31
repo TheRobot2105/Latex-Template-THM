@@ -1,10 +1,12 @@
-name: Publish Release
+name: Latex
 on:
   push:
-    tags:
-      - 'v*'
+    branches:    
+      - main
+    tags:        
+      - v*
 jobs:
-  build:
+  build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -12,12 +14,14 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: report.tex
+          root_file: document.tex
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
-      - name: Create a Release
-        uses: elgohr/Github-Release-Action@v5
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          title: Beispieldokument
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Beispieldokument"
+          files: |
+            *.pdf
