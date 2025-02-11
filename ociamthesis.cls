@@ -116,7 +116,7 @@
 % To format the bibliography
 \usepackage{parskip}
 
-\usepackage[colorlinks=false,pdfpagelabels]{hyperref}
+
 % for linking between references, figures, TOC, etc in the pdf document
 
 \usepackage[nohints,tight]{minitoc}
@@ -338,7 +338,7 @@
 \usepackage{csquotes}
 \hyphenpenalty=500
 \def\longs{{\fontencoding{TS1}\selectfont s}}
-
+\usepackage[colorlinks=false,pdfpagelabels]{hyperref}
 % LOCALIZATION
 \addto\captionsngerman{%keep the %'s, the formatting of this part was a problem once...
 % appendices
