@@ -447,3 +447,4 @@
 	\renewcommand{\headrulewidth}{0pt}
     \setlength{\headheight}{14.5pt}
 }
+\usepackage[figurewithin=none]{caption}
