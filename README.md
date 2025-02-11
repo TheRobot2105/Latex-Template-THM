@@ -5,15 +5,14 @@ Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissens
 ## Hinweise
 
 - Es wurden nicht alles auf Deutsch übersetzt, das meiste sollte auch so verständlich sein.
-- Die Datei für die Erzeugung der PDF-Datei ist bisher nur für Windows verfügbar.
+- Die Erzeugung ist auf Windows und auf Linux möglich. Für Windows die `buildPDF.bat` Datei ausführen und für Linux die `buildPDFLinux.sh` Datei ausführen.
 - Code-Highlighting erfordert eine lokale Python-Installation mit Zusatzpaketen. Siehe Anmerkungen in ociamthesis.cls für weitere Informationen. (ggf. Entfernen!)
 
 ## Nutzung dieses Template
 
-- Zuerst muss eine Tex-Distribution installiert werden wie beispielsweise [Miktex](https://miktex.org/) und ein LaTex-editor wie [TeXstudio](https://www.texstudio.org/) 
+- Zuerst muss eine Tex-Distribution installiert werden wie beispielsweise [Miktex](https://miktex.org/) für Windows oder [Texlive](https://tug.org/texlive/) für Linux und ein LaTex-editor wie [TeXstudio](https://www.texstudio.org/)
 - Dann das Repository klonen und den eigenen Namen und Adresse im Deckblatt, im Sperrvermerk und in der Versicherung eintragen. Diese Dateien sind im Unterverzeichnis `\functional-pages\` zu finden.
--
-- Durch das Ausführen von der buildPdf.bat Datei wird die PDF-Datei erstellt und automatisch geöffnet.
+-Durch das Ausführen von der buildPdf.bat Datei wird die PDF-Datei erzeugt im Ordner `\output\` abgelegt und in Windows automatisch geöffnet. In Linux ist das automatische öffen nicht impimentiert.
 
 ### Erklärung der Verzeichnisse
 
