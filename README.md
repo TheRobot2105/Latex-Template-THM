@@ -1,6 +1,6 @@
 # Latex Template für wissenschaftliche Arbeiten an der THM
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FTheRobot2105%2FLatex-Template-THM%2Fbadge%3Fref%3Dmain&style=flat&label=Compile&logo=none)](https://actions-badge.atrox.dev/TheRobot2105/Latex-Template-THM/goto?ref=main)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TheRobot2105/Latex-Template-THM/release.yml?logo=latex&logoSize=auto&label=compile)
 
 Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissenschaftlichen Richtlinien der THM. Es baut auf diesem [Template](https://www.oxfordechoes.com/oxford-thesis-template/) auf, der im Original für die Oxford Universität gedacht war und schon mehrfach angepasst wurde. Das Deckblatt der THM und andere Anpassungen an die wissenschaftlichen Richtlinien der THM wurde von einer mir unbekannten Person erstellt. Alle weiteren Personen die Änderungen vorgenommen haben, sind in der License-Datei aufgeführt.
 
