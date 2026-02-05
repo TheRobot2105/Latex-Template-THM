@@ -1,4 +1,4 @@
-set working-directory := 'Source'
+#set working-directory := 'Source'
 input := "report"
 outputdir := "./output/"
 outputdirwin := "output"
