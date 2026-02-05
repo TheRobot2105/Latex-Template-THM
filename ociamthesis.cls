@@ -161,52 +161,53 @@
 % The (...) environment puts a large, bold, centered "(...)" label at the top of the page. The (...) themselves appear in a quote environment, i.e. tabbed in at both sides, and on its own page.
 
 % acknowledgements / Danksagung
-\newenvironment{acknowledgements}%
-{   \begin{alwayssingle}
-        \chapter*{\textbf{Danksagung}}
-        \thispagestyle{empty}
-        \pagestyle{empty}
-        \setlength{\baselineskip}{\frontmatterbaselineskip}
-        }
-        {
-\end{alwayssingle}}
-
-% preliminary remarks / Vorbemerkung
-\newenvironment{preliminary-remarks}%
-{   \begin{alwayssingle}
-        \chapter*{\textbf{Vorbemerkung}}
-        \thispagestyle{empty}
-        \pagestyle{empty}
-        \setlength{\baselineskip}{\frontmatterbaselineskip}
-        }
-        {
-\end{alwayssingle}}
-
-% preface / Vorwort
-\newenvironment{preface}%
-{   \begin{alwayssingle}
-        \chapter*{\textbf{Vorwort}}
-        \thispagestyle{empty}
-        \pagestyle{empty}
-        \setlength{\baselineskip}{\frontmatterbaselineskip}
-        }
-        {
-\end{alwayssingle}}
-
-% abstract / Abstract
-\renewenvironment{abstract}%
-{   \begin{alwayssingle}
-        \chapter*{\textbf{Abstract}}
-        \thispagestyle{empty}
-        \pagestyle{empty}
-        \setlength{\baselineskip}{\frontmatterbaselineskip}}
-        {
-\end{alwayssingle}}
-
+%\newenvironment{acknowledgements}%
+%{   \begin{alwayssingle}
+%        \chapter*{\textbf{Danksagung}}
+%        \thispagestyle{empty}
+%        \pagestyle{empty}
+%        \setlength{\baselineskip}{\frontmatterbaselineskip}
+%        }
+%        {
+%\end{alwayssingle}}
+%
+%% preliminary remarks / Vorbemerkung
+%\newenvironment{preliminary-remarks}%
+%{   \begin{alwayssingle}
+%        \chapter*{\textbf{Vorbemerkung}}
+%        \thispagestyle{empty}
+%        \pagestyle{empty}
+%        \setlength{\baselineskip}{\frontmatterbaselineskip}
+%        }
+%        {
+%\end{alwayssingle}}
+%
+%% preface / Vorwort
+%\newenvironment{preface}%
+%{   \begin{alwayssingle}
+%        \chapter*{\textbf{Vorwort}}
+%        \thispagestyle{empty}
+%        \pagestyle{empty}
+%        \setlength{\baselineskip}{\frontmatterbaselineskip}
+%        }
+%        {
+%\end{alwayssingle}}
+%
+%% abstract / Abstract
+%\renewenvironment{abstract}%
+%{   \begin{alwayssingle}
+%        \chapter*{\textbf{Abstract}}
+%        \thispagestyle{empty}
+%        \pagestyle{empty}
+%        \setlength{\baselineskip}{\frontmatterbaselineskip}}
+%        {
+%\end{alwayssingle}}
+%
 % declaration of authorship / Eigenständigkeitserklärung
 \newenvironment{declaration-of-authorship}%
 {   \begin{alwayssingle}
         \chapter*{\textbf{Versicherung}}
+        \addcontentsline{toc}{chapter}{Versicherung}
         \thispagestyle{plain}
         \pagestyle{plain}
         \setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -289,7 +290,7 @@
 
 
 \usepackage[grey, utopia]{quotchap}
-\renewcommand{\chapnumfont}{\fontsize{100}{150}\fontspec{Utopia Semibold}[BoldFont={Utopia Semibold}]\color{grey60}}
+%\renewcommand{\chapnumfont}{\fontsize{100}{150}\fontspec{Utopia Semibold}[BoldFont={Utopia Semibold}]\color{grey60}}
 
 %To put nice quotes at the beginning of the chapters
 
@@ -300,44 +301,44 @@
 \setlength{\textfloatsep}{20pt plus15pt minus4pt}
 
 % JEM: Fix paragraph spacing within quotes for multi-par quotes
-\renewenvironment{savequote}[1][10cm]{%
-    \begin{lrbox}{\@quotebox}
-        \begin{minipage}[t]{#1}
-            \footnotesize\slshape%
-            \setlength{\parskip}{6pt}}{%
-            \unskip
-        \end{minipage}
-    \end{lrbox}
-    \global\setbox\@quotebox\copy\@quotebox
-    \global\let\@printcites\@iprintcites
-    \ignorespacesafterend}
-\renewcommand{\qauthor}[1]{\par
-{\raggedleft\upshape #1\qquad\hbox{}\par}\bigskip}
+%\renewenvironment{savequote}[1][10cm]{%
+%    \begin{lrbox}{\@quotebox}
+%        \begin{minipage}[t]{#1}
+%            \footnotesize\slshape%
+%            \setlength{\parskip}{6pt}}{%
+%            \unskip
+%        \end{minipage}
+%    \end{lrbox}
+%    \global\setbox\@quotebox\copy\@quotebox
+%    \global\let\@printcites\@iprintcites
+%    \ignorespacesafterend}
+%\renewcommand{\qauthor}[1]{\par
+%{\raggedleft\upshape #1\qquad\hbox{}\par}\bigskip}
 
 % JEM: All of this is so that headers in these sections aren't uppercase
-\let\@ldtoc\tableofcontents
-\renewcommand*\tableofcontents{{%
-    \renewcommand*\MakeUppercase[1]{##1}\@ldtoc}}
-\let\@ldlof\listoffigures
-\renewcommand*\listoffigures{{%
-    \renewcommand*\MakeUppercase[1]{##1}\@ldlof}}
-\let\@ldlot\listoftables
-\renewcommand*\listoftables{{%
-    \renewcommand*\MakeUppercase[1]{##1}\@ldlot}}
-\let\@ldbib\bibliography
-\renewcommand*\bibliography[1]{{%
-    \renewcommand*\MakeUppercase[1]{##1}\@ldbib{#1}}}
+%\let\@ldtoc\tableofcontents
+%\renewcommand*\tableofcontents{{%
+%    \renewcommand*\MakeUppercase[1]{##1}\@ldtoc}}
+%\let\@ldlof\listoffigures
+%\renewcommand*\listoffigures{{%
+%    \renewcommand*\MakeUppercase[1]{##1}\@ldlof}}
+%\let\@ldlot\listoftables
+%\renewcommand*\listoftables{{%
+%    \renewcommand*\MakeUppercase[1]{##1}\@ldlot}}
+%\let\@ldbib\bibliography
+%\renewcommand*\bibliography[1]{{%
+%    \renewcommand*\MakeUppercase[1]{##1}\@ldbib{#1}}}
 
 % JEM: for crazy multi character set quotes and Unicode and all
 %\usepackage[LGR,TS1,T1]{fontenc} % in combination with lmodern and xelatex unable to display "ß"; however, with libertine it did work
-\usepackage{fontspec}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+%\usepackage{fontspec}
+%\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}
 %\usepackage{libertine} % looks quite good as well
 \usepackage[ngerman]{babel}
 \usepackage{csquotes}
-\hyphenpenalty=500
-\def\longs{{\fontencoding{TS1}\selectfont s}}
+%\hyphenpenalty=500
+%\def\longs{{\fontencoding{TS1}\selectfont s}}
 \usepackage[colorlinks=false,pdfpagelabels]{hyperref}
 % LOCALIZATION
 \addto\captionsngerman{%keep the %'s, the formatting of this part was a problem once...
@@ -381,8 +382,8 @@
 
 
 % JEM: adjust start-of-chapter spacing
-\renewcommand{\chapterheadstartvskip}{\vspace*{40pt}}
-\renewcommand{\chapterheadendvskip}{\vspace{30pt}}
+%\renewcommand{\chapterheadstartvskip}{\vspace*{40pt}}
+%\renewcommand{\chapterheadendvskip}{\vspace{30pt}}
 
 
 % JEM: combine all of the commands you run before appendices start
@@ -417,7 +418,7 @@
 
 
 \def\@makechapterhead#1{%
-	{\parindent \z@ \raggedright \normalfont \vskip 20\p@%
+	{\parindent \z@ \normalfont \vskip 20\p@%
 		\ifnum \c@secnumdepth >\m@ne
 		\normalsize\bfseries \thechapter\ % <-- Chapter # (without "Chapter")
 		\fi
@@ -434,7 +435,6 @@
 	{-3.25ex\@plus -1ex \@minus -.2ex}%
 	{1.5ex \@plus .2ex}%
 	{\normalfont\normalsize\bfseries}}
-\usepackage{etoolbox}
 \makeatletter
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
@@ -447,4 +447,14 @@
 	\renewcommand{\headrulewidth}{0pt}
     \setlength{\headheight}{14.5pt}
 }
-\usepackage[figurewithin=none]{caption}
+\usepackage[figurewithin=none,tablewithin=none]{caption}
+\usepackage{gensymb}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{siunitx}
+\usepackage[european, siunitx]{circuitikz}
+
+\newcommand\ChangeRT[1]{\noalign{\hrule height #1}}
+\usepackage{pdflscape}
+\usepackage{svg}
+\usepackage{subcaption}
