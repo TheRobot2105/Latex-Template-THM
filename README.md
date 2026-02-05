@@ -1,6 +1,6 @@
 # Latex Template für wissenschaftliche Arbeiten an der THM
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TheRobot2105/Latex-Template-THM/release.yml?logo=latex&logoSize=auto&label=compile)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TheRobot2105/Latex-Template-THM/release.yml?logo=latex&logoSize=auto&label=Compile)
 
 Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissenschaftlichen Richtlinien der THM. Es baut auf diesem [Template](https://www.oxfordechoes.com/oxford-thesis-template/) auf, der im Original für die Oxford Universität gedacht war und schon mehrfach angepasst wurde. Das Deckblatt der THM und andere Anpassungen an die wissenschaftlichen Richtlinien der THM wurde von einer mir unbekannten Person erstellt. Alle weiteren Personen die Änderungen vorgenommen haben, sind in der License-Datei aufgeführt.
 
@@ -8,6 +8,7 @@ Dieses Template beinhaltet eine Grundstruktur die möglichst nahe an den wissens
 
 - Es wurden nicht alles auf Deutsch übersetzt, das meiste sollte auch so verständlich sein.
 - Die Erzeugung ist auf Windows und auf Linux möglich. Für Windows die `buildPDF.bat` Datei ausführen und für Linux die `buildPDFLinux.sh` Datei ausführen.
+- Alternativ kann mit dem `justfile` und [just](https://github.com/casey/just) das Dokument erzeugt werden. Darin sind Scripte für Windows und Linux enthalten die automatisch abhängig von dem verwendeten Betriebssystem ausgeführt werden.
 - Code-Highlighting erfordert eine lokale Python-Installation mit Zusatzpaketen. Siehe Anmerkungen in ociamthesis.cls für weitere Informationen. (ggf. Entfernen!)
 
 ## Nutzung dieses Template
